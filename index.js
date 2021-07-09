@@ -6,19 +6,12 @@ const cors = require('cors')
 const app = express()
 app.use(cors())
 
-const gis = require('g-i-s')
+const { randomFarhat } = require('./farhat.js')
 
 app.get('/', async (request, response) => {
-    gis('farhát', (err, result) => {
-        if (err) {
-            console.error(err)
-            return
-        }
-    
-        const random = result[Math.floor(Math.random() * result.length)]
-        
-        response.json(random)
-    })
+    const farhat = await randomFarhat()
+
+    response.json(farhat)
 })
 
 function init() {
