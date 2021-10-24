@@ -15,7 +15,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "api": "node index.js",
+    "start": "node index.js",
     "bot": "node bot.js"
   },
   "author": "Csoki",
