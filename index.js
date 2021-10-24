@@ -1,4 +1,4 @@
-const PORT = 8080
+const PORT = 80
 
 const express = require('express')
 const cors = require('cors')
